@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Threat Vector — Cybersecurity Crossword</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="bg-media">
+    <img id="bg-img" src="" alt="" hidden>
+  </div>
+
+  <div id="app">
+
+    <header id="header">
+      <div id="header-top">
+        <div id="header-title">
+          <h1>Threat Vector</h1>
+          <p>Cybersecurity Crossword &mdash; drag or type letters to complete the puzzle</p>
+        </div>
+        <div id="header-controls">
+          <button id="bg-cycle-btn" class="theme-btn" data-bg-idx="0">BG: Off</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Puzzle + Clues -->
+    <div id="main">
+      <div id="grid-panel">
+        <div id="grid-container">
+          <!-- Crossword grid rendered here -->
+        </div>
+      </div>
+
+      <aside id="clue-panel">
+        <!-- Clues rendered here -->
+      </aside>
+    </div>
+
+    <!-- Letter tile bank -->
+    <div id="bank-panel">
+      <div id="bank-header">
+        <div id="bank-label">Available letters</div>
+        <div id="bank-actions">
+          <button id="hint-btn">Reveal a letter</button>
+          <button id="solve-btn">Show solution</button>
+        </div>
+      </div>
+      <div id="tile-bank">
+        <!-- Tiles rendered here -->
+      </div>
+    </div>
+
+  </div><!-- #app -->
+
+  <!-- Solve prompt -->
+  <div id="solve-prompt" class="hidden">
+    <button id="tell-more-btn">Tell me more</button>
+  </div>
+
+  <!-- Win overlay -->
+  <div id="win-overlay" class="hidden">
+    <div id="win-card">
+      <h2>Access Granted</h2>
+      <p id="win-sub">All words decoded. The network is secure.</p>
+      <button id="learn-btn">Tell me more</button>
+    </div>
+  </div>
+
+  <!-- Debrief overlay -->
+  <div id="debrief-overlay" class="hidden">
+    <div id="debrief-card">
+      <h2 id="debrief-title">Words Decoded</h2>
+      <div id="debrief-words">
+        <!-- Word definition cards rendered here -->
+      </div>
+      <button id="play-again-btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="generator.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
